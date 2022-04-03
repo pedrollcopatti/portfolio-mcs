@@ -1,10 +1,15 @@
 import { Text } from "@chakra-ui/react";
 import { ReactNode } from "react";
 
-export function Monospace(children: ReactNode){
+type MonospaceProps = {
+    children: ReactNode
+    selectionColor: string
+}
+
+export function Monospace(props: MonospaceProps){
     return(
-        <Text fontFamily='monospace'>
-            {children}
+        <Text _selection={{ color: `${props.selectionColor}`, background: 'transparent'}} textAlign='center' fontFamily='monospace' fontSize='lg'>
+            {props.children}
         </Text>
     )
 }

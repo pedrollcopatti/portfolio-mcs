@@ -1,0 +1,5 @@
+.header::selection{
+    color: transparent;
+    background: transparent;
+    -webkit-text-stroke: 2px #1976D2;
+  }
