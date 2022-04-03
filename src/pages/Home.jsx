@@ -13,6 +13,8 @@ import useWindowSize from '../hooks/useWindowSize';
 import { useEffect, useRef, useState } from 'react';
 import { motion, useTransform, useViewportScroll } from 'framer-motion';
 import { Monospace } from '../components/Monospace';
+import { Marcas } from '../components/Marcas';
+import { Mark } from '../components/Mark';
 
 export function Home(){
 
@@ -110,10 +112,11 @@ export function Home(){
                 spacing='10'
                 width='55%'
                 >
-                    <Monospace selectionColor='#52CC56'>Na minha visão — você pode discordar —, quando um cliente contrata um copywriter, ele espera receber algo persuasivo, impactante e, principalmente, algo novo. Afinal, a cada dia que passa a concorrência está maior e mais profissional. Tudo o que um empresário de respeito não quer é ter seu produto considerado irrelevante, “mais do mesmo”. No mercado atual, quando isso acontece podemos dizer que o produto já fracassou.
+                    <Monospace selectionColor='#52CC56'>Na minha visão — você pode discordar —, quando um cliente contrata um copywriter, ele espera receber algo persuasivo, impactante e, principalmente, algo novo. Afinal, <Mark mark='rgb(230, 255, 0)'>a cada dia que passa a concorrência está maior e mais profissional</Mark>.Tudo o que um empresário de respeito não quer é ter seu produto considerado irrelevante, “mais do mesmo”.
                     </Monospace>
+                    <Monospace>No mercado atual, quando isso acontece podemos dizer que o produto já fracassou.</Monospace>
                     <Monospace selectionColor='#4588E5'>
-                    No entanto, infelizmente, o que mais vemos por aí são cartas de venda e anúncios sendo  copiados a torto e a rodo. Fórmulas prontas, criatividade zero.</Monospace>
+                    No entanto, infelizmente, <Mark mark='rgb(230, 255, 0)'>o que mais vemos por aí são campanhas sendo copiadas a torto e a rodo</Mark>. Fórmulas prontas, criatividade zero.</Monospace>
                 </Stack>
 
                 {/* COMEÇO DA PARTE ESCURA */}
@@ -219,7 +222,7 @@ export function Home(){
                 spacing='8'
                 
                 >
-                    <Text _selection={{ color: '#52CC56', background: 'transparent'}} width='90%' textAlign='center' ml='2' fontFamily='monospace' fontSize='xl'>Qual é o melhor dia para conversarmos sobre seus planos de crescimento em vendas?</Text>
+                    <Mark mark='rgb(230, 255, 0)'>Qual é o melhor dia para conversarmos sobre seus planos de crescimento em vendas?</Mark>
 
                     <Stack
                     width='80%'
@@ -241,25 +244,8 @@ export function Home(){
                 spacing='12'
                 >
                     <Heading _selection={{ color: 'transparent', background: 'transparent', '-webkit-text-stroke': '2px #1976D2'}}  textAlign='center' size='2xl'>Algumas marcas com as quais já trabalhei</Heading>
-                    <Stack
-                    spacing='8'
-                    direction='row'
-                    width='100%'
-                    >
-                    <Box width='25%' >
-                    <Image src={carteirabw}/>
-                    </Box>
-                    <Box width='25%'>
-                    <Image src={cecllbw}/>
-                    </Box>
-                    <Box width='25%'>
-                    <Image src={portalbw}/>
-                    </Box>
-                    <Box width='25%'>
-                    <Image src={traderbw}/>
-                    </Box>
-                    </Stack>
-                    <Text _selection={{ color: '#4588E5', background: 'transparent'}} ml='2' textAlign='center' fontFamily='monospace' fontSize='lg'>Algumas das campanhas que escrevi já foram copiadas por empresas bilionárias. Outras pautaram o discurso de todo um mercado. Esse é o poder da originalidade.</Text>
+                    <Marcas/>
+                    <Text _selection={{ color: '#4588E5', background: 'transparent'}} ml='2' textAlign='center' fontFamily='monospace' fontSize='lg'>Algumas das campanhas que escrevi já foram copiadas por empresas bilionárias. Outras pautaram o discurso de todo um mercado. Esse é o poder da <Mark mark='rgb(230, 255, 0)'>originalidade</Mark>.</Text>
                 </Stack>
                 <Stack
                 width='65%'
