@@ -8,7 +8,6 @@ import { Message } from '../assets/Message';
 export function Nav(){
     const MotionFlex = motion(Flex);
     const MotionIconButton = motion(IconButton);
-    const [isHover, setIsHover] = useState(false)
 
     return(
     <MotionFlex
@@ -23,8 +22,8 @@ export function Nav(){
     </Box>
     <Spacer/>
     <MotionIconButton
-    onHoverStart={()=>{setIsHover(true)}}
-    onHoverEnd={()=>{setIsHover(false)}}
+    _focus={{border:'none'}}
+    whileHover={{scale: 1.1}}
     variant='unstyled'
     aria-label='message'
     icon={<Message/>}

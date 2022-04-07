@@ -20,7 +20,6 @@ export function Home(){
 
     const MotionButton = motion(Button);
     const MotionFlex = motion(Flex);
-    const MotionText = motion(Text);
 
 //COMEÇO DA LÓGICA DO SMOOTH SCROLL
 
@@ -92,9 +91,9 @@ export function Home(){
         <Nav/>
             <Stack
             ref={scrollContainer}
-            mt='48'
+            mt='80'
             width='80vw'
-            height='2200px'
+            height='2500px'
             align='center'
             spacing='32'
             >
@@ -102,21 +101,28 @@ export function Home(){
                 {/* HEADER */}
 
                 <Stack
-                spacing='12'
+                spacing='64'
                 align='center'
                 >
-                    <Heading _selection={{ color: 'transparent', background: 'transparent', '-webkit-text-stroke': '2px #1976D2'}} size='3xl'>Copywriting sem padrão</Heading>
-                    <Text _selection={{ color: '#4588E5', background: 'transparent'}} fontFamily='monospace' fontSize='xl'>Seu produto pode pautar o discurso de um mercado inteiro.</Text>
+                <Stack
+                spacing='16'
+                align='center'
+                justify='center'
+                width='100%'
+                >
+                    <Heading textAlign='center' _selection={{ color: 'transparent', background: 'transparent', '-webkit-text-stroke': '2px #1976D2'}} size='4xl'>Copywriting sem padrão</Heading>
+                    <Text textAlign='center' _selection={{ color: '#4588E5', background: 'transparent'}} fontFamily='monospace' fontSize='2xl'>Seu produto pode pautar o discurso de um mercado inteiro.</Text>
                 </Stack>
                 <Stack
                 spacing='10'
                 width='55%'
                 >
-                    <Monospace selectionColor='#52CC56'>Na minha visão — você pode discordar —, quando um cliente contrata um copywriter, ele espera receber algo persuasivo, impactante e, principalmente, algo novo. Afinal, <Mark mark='rgb(230, 255, 0)'>a cada dia que passa a concorrência está maior e mais profissional</Mark>.Tudo o que um empresário de respeito não quer é ter seu produto considerado irrelevante, “mais do mesmo”.
+                    <Monospace selectionColor='#52CC56'>Na minha visão — você pode discordar —, quando um cliente contrata um copywriter, ele espera receber algo persuasivo, impactante e, principalmente, algo novo. Afinal, <Mark on={0.23} mark='rgb(230, 255, 0)'>a cada dia que passa a concorrência está maior e mais profissional</Mark>.Tudo o que um empresário de respeito não quer é ter seu produto considerado irrelevante, “mais do mesmo”.
                     </Monospace>
                     <Monospace>No mercado atual, quando isso acontece podemos dizer que o produto já fracassou.</Monospace>
                     <Monospace selectionColor='#4588E5'>
-                    No entanto, infelizmente, <Mark mark='rgb(230, 255, 0)'>o que mais vemos por aí são campanhas sendo copiadas a torto e a rodo</Mark>. Fórmulas prontas, criatividade zero.</Monospace>
+                    No entanto, infelizmente, <Mark on={0.35} mark='rgb(230, 255, 0)'>o que mais vemos por aí são campanhas sendo copiadas a torto e a rodo</Mark>. Fórmulas prontas, criatividade zero.</Monospace>
+                </Stack>
                 </Stack>
 
                 {/* COMEÇO DA PARTE ESCURA */}
@@ -179,7 +185,7 @@ export function Home(){
                 spacing='0'
                 >
                     <Flex align='flex-end' width='100%'>
-                    <Heading _selection={{ color: 'transparent', background: 'transparent', '-webkit-text-stroke': '2px #1976D2'}}  size='3xl'>Mas se,</Heading>
+                    <Heading _selection={{ color: 'transparent', background: 'transparent', '-webkit-text-stroke': '2px #1976D2'}}  size='2xl'>Mas se,</Heading>
                     <Spacer />
                     <Monospace selectionColor='#52CC56'>por outro lado, o que você procura para seu produto </Monospace>
                     </Flex>
@@ -222,7 +228,7 @@ export function Home(){
                 spacing='8'
                 
                 >
-                    <Mark mark='rgb(230, 255, 0)'>Qual é o melhor dia para conversarmos sobre seus planos de crescimento em vendas?</Mark>
+                    <Mark talign={true} on={1.41} mark='rgb(230, 255, 0)'>Qual é o melhor dia para conversarmos sobre seus planos de crescimento em vendas?</Mark>
 
                     <Stack
                     width='80%'
@@ -245,7 +251,7 @@ export function Home(){
                 >
                     <Heading _selection={{ color: 'transparent', background: 'transparent', '-webkit-text-stroke': '2px #1976D2'}}  textAlign='center' size='2xl'>Algumas marcas com as quais já trabalhei</Heading>
                     <Marcas/>
-                    <Text _selection={{ color: '#4588E5', background: 'transparent'}} ml='2' textAlign='center' fontFamily='monospace' fontSize='lg'>Algumas das campanhas que escrevi já foram copiadas por empresas bilionárias. Outras pautaram o discurso de todo um mercado. Esse é o poder da <Mark mark='rgb(230, 255, 0)'>originalidade</Mark>.</Text>
+                    <Text _selection={{ color: '#4588E5', background: 'transparent'}} ml='2' textAlign='center' fontFamily='monospace' fontSize='lg'>Algumas das campanhas que escrevi já foram copiadas por empresas bilionárias. Outras pautaram o discurso de todo um mercado. Esse é o poder da <Mark on={1.88} mark='rgb(230, 255, 0)'>originalidade</Mark>.</Text>
                 </Stack>
                 <Stack
                 width='65%'
@@ -272,21 +278,25 @@ export function Home(){
                     spacing='12'
                     >
                     <IconButton
+                    _focus={{border:'none'}}
                     variant='unstyled'
                     aria-label='facebook'
                     icon={<Facebook/>}
                     />
                     <IconButton
+                    _focus={{border:'none'}}
                     variant='unstyled'
                     aria-label='whatsapp'
                     icon={<WhatsApp/>}
                     />
                     <IconButton
+                    _focus={{border:'none'}}
                     variant='unstyled'
                     aria-label='medium'
                     icon={<Medium/>}
                     />
                     <IconButton
+                    _focus={{border:'none'}}
                     variant='unstyled'
                     aria-label='instagram'
                     icon={<Instagram/>}
